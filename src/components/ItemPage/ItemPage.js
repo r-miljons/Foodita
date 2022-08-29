@@ -12,7 +12,7 @@ import './itemPage.css';
 export function Item(props) {
     const { id } = useParams();
     const menu = useSelector(state => state.menu);
-    const itemToRender = menu.find(item => item.id === id);
+    const itemToRender = menu.find(item => item.id == id);
     const { name, price, discount, rating, delivery, ingredients, description, img, veg } = itemToRender;
     const discountValues = calculateDiscount(price, discount);
     const dispatch = useDispatch();
