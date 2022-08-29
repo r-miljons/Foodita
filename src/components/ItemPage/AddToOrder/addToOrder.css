@@ -1,0 +1,92 @@
+.add-order-wrap {
+    display: flex;
+    gap: 1rem;
+}
+
+.pick-amount {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    border-radius: 30px;
+    border: 2px solid rgb(198, 198, 198);
+    padding: 0.4rem 1rem;
+}
+
+.item-amount {
+    font-size: 1.5rem;
+}
+
+.add-icon, .remove-icon {
+    width: 2.2rem;
+    filter: invert(0.4);
+}
+
+.add-icon, .remove-icon:hover {
+    cursor: pointer;
+}
+
+.add-to-order {
+    border: none;
+    background-color: rgb(106, 169, 13);
+    color: rgb(255, 255, 255);
+    font-family: "Rubik", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+    font-size: 1.1rem;
+    padding: 0.8rem 1.2rem;
+    border-radius: 30px;
+}
+
+.add-to-order:hover {
+    cursor: pointer;
+}
+
+.grey {
+    filter: invert(0.8);
+}
+
+.missing-ingredients {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+}
+
+.missing-message-container {
+    width: 400px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-sizing: border-box;
+}
+
+.centered {
+    display: block;
+    margin: 0 auto;
+}
+
+.close-icon {
+    display: block;
+    margin-left: auto;
+    width: 1.8rem;
+    filter: invert(0.5);
+    position: relative;
+    top: -1rem;
+    right: -1rem;
+}
+
+.close-icon:hover {
+    filter: invert(0);
+    cursor: pointer;
+}
+
+.missing-message {
+    margin: -1rem 0 1rem;
+    font-size: 1.3rem;
+    text-align: center;
+}

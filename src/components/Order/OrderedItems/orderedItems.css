@@ -1,0 +1,58 @@
+.order-list {
+    list-style-type: none;
+    padding: 0;
+    width: 400px;
+}
+
+.ordered-item {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgb(197, 197, 197);
+}
+
+.ordered-item-flex {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.order-item-title {
+    font-size: 1.5rem;
+}
+
+.ordered-amount {
+    color: rgb(151, 151, 151);
+}
+
+.order-item-price {
+    font-size: 1.5rem;
+    text-align: end;
+}
+
+.removed-ingredients {
+    background-color: rgb(254, 207, 119);
+    color: rgb(79, 79, 79);
+    padding: 0.2rem 1rem;
+    border-radius: 30px;
+    margin: 0.4rem 0 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: min-content;
+    max-width: 240px;
+    box-sizing: border-box;
+    
+}
+
+.remove-icon-order, .add-icon-order {
+    width: 1.5rem;
+}
+
+.remove-icon-order, .add-icon-order:hover {
+    cursor: pointer;
+}
+
+.order-amount {
+    padding: 0.1rem 0.3rem;
+    max-width: max-content;
+    margin: 0 0 0 auto;
+}

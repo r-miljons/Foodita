@@ -1,0 +1,15 @@
+.foods-container {
+    width: max-content;
+}
+
+.no-results {
+    height: 277px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.no-results h2 {
+    font-size: 2rem;
+    color: rgb(145, 145, 145);
+}

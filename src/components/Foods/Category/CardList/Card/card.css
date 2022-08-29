@@ -1,0 +1,106 @@
+.card-container {
+    width: 400px;
+}
+
+.card-container:hover {
+    cursor: pointer;
+}
+
+p {
+    margin: 0;
+}
+
+.card-img {
+    position: relative;
+    height: 200px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    border-radius: 15px;
+}
+
+.percent-off {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background-color: rgb(255, 57, 57);
+    color: rgb(237, 237, 237);
+    width: max-content;
+    height: max-content;
+    padding: 0.4rem 0.8rem;
+    border-radius: 30px;
+    font-size: 1.1rem;
+}
+
+.delivery-time {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    width: max-content;
+    height: max-content;
+    padding: 0.4rem 0.8rem;
+    border-radius: 30px;
+    font-size: 1.1rem;
+}
+
+.card-title {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+}
+
+.card-title h2 {
+    margin: 0;
+    font-weight: 700;
+}
+
+.card-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.stars {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.star-icon {
+    width: 1.2rem;
+}
+
+.card-price {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+#price {
+    font-size: 1.5rem;
+    font-weight: 200; 
+    color: rgb(104, 104, 104);
+    text-decoration-thickness: 1.5px;
+}
+
+.card-discounted-price {
+    background-color: rgb(230, 52, 52);
+    color: rgb(237, 237, 237);
+    font-weight: 500;
+    font-size: 1.2rem;
+    padding: 0.2rem 0.8rem;
+    border-radius: 30px;
+}
+
+.veg-icon-wrap {
+    position: relative;
+}
+
+.veg-icon {
+    width: 1.5rem;
+    position: absolute;
+    bottom: 4px;
+    left: 0.5rem;
+}
