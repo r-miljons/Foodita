@@ -1,0 +1,33 @@
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 4rem;
+    height: 8rem;
+    background-color: rgb(52, 52, 52);
+}
+
+.logo-copyright {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.logo-copyright img {
+    width: 4rem;
+    filter: invert(1);
+}
+
+.logo-copyright p {
+    color:rgb(255, 255, 255);
+    font-size: 1.1rem;
+}
+
+.socials {
+    display: flex;
+    gap: 2rem;
+}
+
+.socials img {
+    width: 2rem;
+    filter: invert(1);
+}

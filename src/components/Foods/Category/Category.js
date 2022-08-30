@@ -1,5 +1,6 @@
 import { React } from "react";
 import { CardList } from "./CardList/CardList";
+import { CategoryEmoji } from "./CategoryEmoji/CategoryEmoji";
 import { capitalizeFirstLetter } from "../../../utilities/capitalizeFirstLetter";
 import "./category.css";
 import { useSelector } from "react-redux";
@@ -11,7 +12,10 @@ export function Category({ category }) {
 
 	return (
 		<div className="category">
-			<h2 className="category-title">{capitalizeFirstLetter(category)}</h2>
+			<h2 className="category-title">
+				{capitalizeFirstLetter(category)}
+				<CategoryEmoji category={category}/>
+			</h2>
 			<CardList items={itemsInCategory} />
 		</div>
 	);
