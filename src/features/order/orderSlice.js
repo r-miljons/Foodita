@@ -1,5 +1,15 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+export const saveOrderInfo = (store) => (next) => (action) => {
+    const result = next(action);
+    if ( action.type?.startsWith("order/")) {
+        const orderState = store.getState().order;
+        localStorage.setItem("order", JSON.stringify(orderState));
+    }
+    return result;
+}
+
+
 export const orderSlice = createSlice({
 	name: "order",
 	initialState: localStorage.getItem("order")
@@ -25,8 +35,6 @@ export const orderSlice = createSlice({
 			} else {
 				state.contents.push(action.payload);
 			}
-			//side effect in each reducer
-			localStorage.setItem("order", JSON.stringify(state));
 		},
 		calculateTotal: (state) => {
 			let orderTotal = 0;
@@ -34,14 +42,12 @@ export const orderSlice = createSlice({
 				orderTotal += item.price * item.discount * item.amount;
 			});
 			state.total = orderTotal.toFixed(2);
-			localStorage.setItem("order", JSON.stringify(state));
 		},
 		incrementAmount: (state, action) => {
 			const index = state.contents.findIndex(
 				(item) => item.orderID === action.payload
 			);
 			state.contents[index].amount += 1;
-			localStorage.setItem("order", JSON.stringify(state));
 		},
 		decrementAmount: (state, action) => {
 			const index = state.contents.findIndex(
@@ -52,12 +58,10 @@ export const orderSlice = createSlice({
 			} else if (state.contents[index].amount > 0) {
 				state.contents.splice(index, 1);
 			}
-			localStorage.setItem("order", JSON.stringify(state));
 		},
 		removeAll: (state) => {
 			state.contents = [];
 			state.total = 0;
-			localStorage.setItem("order", JSON.stringify(state));
 		},
 	},
 });
