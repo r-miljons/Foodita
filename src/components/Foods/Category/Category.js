@@ -7,7 +7,7 @@ import { useSelector } from "react-redux";
 import { sortByCategory } from "../../../utilities/sortByCategory";
 
 export function Category({ category }) {
-	const items = useSelector((state) => state.searchResults);
+	const items = useSelector((state) => state.search.searchResults);
 	const itemsInCategory = sortByCategory(items, category);
 
 	return (

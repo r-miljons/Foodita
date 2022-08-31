@@ -1,8 +1,11 @@
 .search-container {
-    width: 1264px;
+    width: 100%;
+    margin: 2rem 0;
+}
+
+.search-section {
     display: flex;
     justify-content: space-between;
-    margin: 2rem 0;
 }
 
 .search-box {
@@ -32,13 +35,37 @@
     filter: invert(0.5);
 }
 
+.filter-icon-wrap {
+    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
 .filter-icon {
     filter: invert(0.3);
-    margin-left: 1rem;
     width: 2rem;
     align-self: center;
 }
 
-.filter-icon:hover {
+.filter-icon-wrap:hover {
     cursor: pointer;
+}
+
+.filter-counter {
+    position: absolute;
+    top: -1rem;
+    right: -1rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 63, 63);
+}
+
+.filter-counter p {
+    color:rgb(227, 227, 227);
 }

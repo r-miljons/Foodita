@@ -1,16 +1,45 @@
-import { React } from 'react';
+import { React, useEffect, useState } from "react";
+import Twemoji from "react-twemoji";
+import "./emoji.css";
 
 export const CategoryEmoji = (props) => {
-    const { category } = props;
-    //use switch statement to determine svg src
-    // use require("../pathname") to dynamically import svg
-    let emoji = false;
+	const { category } = props;
+	const [emoji, setEmoji] = useState('');
 
-    return (
-        <span>
-            {
-                emoji ? <img className='category-emoji' src='svg here' alt='category-emoji'/> : false
-            }
-        </span>
-    );
-}
+	useEffect(() => {
+		switch (category) {
+			case "burgers":
+				setEmoji("🍔");
+				break;
+			case "seafood":
+                setEmoji("🍣");
+				break;
+			case "bowls":
+                setEmoji("🍲");
+				break;
+			case "Soft Drinks":
+                setEmoji("🥤");
+				break;
+			case "pizza":
+                setEmoji("🍕");
+				break;
+			case "soup":
+                setEmoji("🍜");
+				break;
+			case "main":
+                setEmoji("🍝");
+				break;
+			case "desserts":
+                setEmoji("🧁");
+				break;
+		}
+	}, [category]);
+
+	return emoji ? (
+		<Twemoji options={{ className: "twemoji" }} noWrapper={true}>
+			<span>{emoji}</span>
+		</Twemoji>
+	) : (
+		false
+	);
+};
