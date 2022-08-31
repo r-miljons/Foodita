@@ -2,7 +2,7 @@ import { React, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getCategories } from "../../../utilities/getCategories";
 import { capitalizeFirstLetter } from "../../../utilities/capitalizeFirstLetter";
-import { addFilter, removeFilter, resetFilter } from "../../../features/search/searchSlice";
+import { addCategoryFilter, removeCategoryFilter, resetCategoryFilter, selectCategories, selectSortTypes, selectedSortType, toggleVegMenu } from "../../../features/search/searchSlice";
 import "./filter.css";
 
 export function Filter() {
@@ -10,25 +10,32 @@ export function Filter() {
 	let categories = getCategories(useSelector((state) => state.menu));
     // added 'All' category since its not a category from the menu
     categories.unshift('All');
-	const filters = useSelector((state) => state.search.searchFilter);
+	const filters = useSelector(selectCategories);
+    const sortTypes = useSelector(selectSortTypes);
+    const selectedType = useSelector(selectedSortType);
+    const isMenuVeg = useSelector((state) => state.search.searchFilter.vegMenu);
 
     useEffect(() => {
         if (filters.length === 0) {
-            dispatch(resetFilter());
+            dispatch(resetCategoryFilter());
         }
         if (filters.includes("All") && filters.length > 1) {
-            dispatch(removeFilter("All"));
+            dispatch(removeCategoryFilter("All"));
         }
     }, [filters]);
 
 	const toggleFilter = (filter) => {
         if (filter === "All") {
-            dispatch(resetFilter());
+            dispatch(resetCategoryFilter());
         } else if (!filters.includes(filter)) {
-            dispatch(addFilter(filter));
+            dispatch(addCategoryFilter(filter));
         } else {
-            dispatch(removeFilter(filter));
+            dispatch(removeCategoryFilter(filter));
         }
+    };
+
+    const toggleVegetarianMenu = () => {
+        dispatch(toggleVegMenu());
     };
 
 	return (
@@ -51,6 +58,39 @@ export function Filter() {
                         </div>
                     );
                 })}
+
+                 <div
+                    className={
+                        isMenuVeg
+                        ? "filter-category filter-selected"
+                        : "filter-category"
+                    }
+                    key='veg'
+                    onClick={toggleVegetarianMenu}
+                >
+                    <p>Vegetarian</p>
+                </div>
+
+            </div>
+            <p className="filter-title">Sort by</p>
+            <div className="grid-container wider-grid">
+                {
+                    sortTypes.map((type, index) => {
+                        return (
+                            <div
+                                className={
+                                    sortTypes.includes(selectedType)
+                                        ? "filter-category filter-selected"
+                                        : "filter-category"
+                                }
+                                key={index}
+                                
+                            >
+                                <p>{capitalizeFirstLetter(type)}</p>
+                            </div>
+                        );
+                    })
+                }
             </div>
         </div>
         </div>

@@ -8,7 +8,15 @@ export const searchSlice = createSlice({
     initialState: {
         searchResults: menu,
         searchTerm: '',
-        searchFilter: ["All"]
+        searchFilter: {
+            vegMenu: false,
+            categories: ["All"],
+            sortBy: {
+                sortTypes: ["Most Expensive", "Least Expensive", "Most Popular", "Least Popular"],
+                selected: ''
+            },
+            activeFilters: [],
+        }
     },
     reducers: {
         setResults: (state, action) => {
@@ -16,24 +24,48 @@ export const searchSlice = createSlice({
             return state;
         },
         setTerm: (state, action) => {
-            state = action.payload;
+            state.searchTerm = action.payload;
             return state;
         },
-        addFilter: (state, action) => {
-            state.searchFilter.unshift(action.payload);
+        addCategoryFilter: (state, action) => {
+            state.searchFilter.categories.unshift(action.payload);
+            state.searchFilter.activeFilters.push(action.payload);
             return state;
         },
-        removeFilter: (state, action) => {
-            state.searchFilter = state.searchFilter.filter(item => item !== action.payload);
+        removeCategoryFilter: (state, action) => {
+            state.searchFilter.categories = state.searchFilter.categories.filter(item => item !== action.payload);
+            state.searchFilter.activeFilters = state.searchFilter.activeFilters.filter(item => item !== action.payload);
             return state;
         },
-        resetFilter: (state, action) => {
-            state.searchFilter = ["All"];
+        resetCategoryFilter: (state, action) => {
+            for (let x = 0; x < state.searchFilter.categories.length; x++) {
+                state.searchFilter.activeFilters = state.searchFilter.activeFilters.filter(y => y !== state.searchFilter.categories[x])
+            }
+            state.searchFilter.categories = ["All"];
+            return state;
+        },
+        selectSortType: (state, action) => {
+            state.searchFilter.sortBy.selected = action.payload;
+            return state;
+        },
+        toggleVegMenu: (state, action) => {
+            if (state.searchFilter.vegMenu) {
+                state.searchFilter.vegMenu = false;
+                state.searchFilter.activeFilters = state.searchFilter.activeFilters.filter(x => x !== "Vegetarian");
+            } else {
+                state.searchFilter.vegMenu = true;
+                state.searchFilter.activeFilters.push("Vegetarian");
+            }
+
             return state;
         }
     }
 });
 
-export const { setResults, setTerm, addFilter, removeFilter, resetFilter } = searchSlice.actions;
+export const selectSortTypes  = (state) => state.search.searchFilter.sortBy.sortTypes;
+export const selectCategories = (state) => state.search.searchFilter.categories;
+export const selectedSortType = (state) => state.search.searchFilter.sortBy.selected;
+
+export const { setResults, setTerm, addCategoryFilter, removeCategoryFilter, resetCategoryFilter, selectSortType, toggleVegMenu } = searchSlice.actions;
 
 export default searchSlice.reducer;

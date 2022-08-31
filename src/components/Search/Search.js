@@ -1,6 +1,6 @@
 import { React, useState } from "react";
 import { useDispatch } from "react-redux";
-import { setTerm } from "../../features/search/searchSlice";
+import { selectCategories, setTerm } from "../../features/search/searchSlice";
 import { useSelector } from "react-redux";
 import { Filter } from "./Filter/Filter";
 import searchIcon from "../../assets/icons/search.svg";
@@ -11,7 +11,8 @@ import './search.css';
 export function Search() {
     const dispatch = useDispatch();
     const searchTerm = useSelector(state => state.searchTerm);
-    const filters = useSelector(state => state.search.searchFilter);
+    const categoryFilters = useSelector(selectCategories);
+    const activeFilters = useSelector(state => state.search.searchFilter.activeFilters);
     const [filterOpen, setFilterOpen] = useState(false);
 
     const handleChange = (e) => {
@@ -32,8 +33,8 @@ export function Search() {
                 <div className="filter-icon-wrap">
                     <img className="filter-icon" src={ filterOpen ? showLess : filterIcon } onClick={toggleFilter}/>
                     {
-                        filters.includes("All")
-                        ? false : <div className="filter-counter"><p>{filters.length}</p></div>
+                        categoryFilters.includes("All") && activeFilters.length === 0
+                        ? false : <div className="filter-counter"><p>{activeFilters.length}</p></div>
                     }
                 </div>
             </div>

@@ -1,7 +1,7 @@
 .filter-container {
     width: 100%;
     box-sizing: border-box;
-    padding: 2rem 5rem 2rem 2rem;
+    padding: 0 5rem 2rem 2rem;
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.081);
 }
 
@@ -11,7 +11,7 @@
 }
 
 .filter-title {
-    margin-bottom: 1.5rem;
+    margin: 1.5rem 0;
     font-size: 1.5rem;
 }
 
@@ -30,6 +30,10 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(max(var(--grid-item--min-width), var(--grid-item--max-width)), 1fr));
     grid-gap: var(--grid-layout-gap);
+}
+
+.wider-grid {
+    --grid-item--min-width: 160px;
 }
 
 .filter-category {
