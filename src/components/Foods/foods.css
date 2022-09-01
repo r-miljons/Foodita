@@ -12,4 +12,8 @@
 .no-results h2 {
     font-size: 2rem;
     color: rgb(145, 145, 145);
+    max-width: 600px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }

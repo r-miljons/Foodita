@@ -6,9 +6,6 @@ import restaurantImg from "../../assets/homePage/restaurant.jpg";
 import staffImg from "../../assets/homePage/staff.jpg";
 import './home.css';
 
-
-//<Link to={'/menu'}>Menu</Link>
-
 export function Home() {
     const navigate = useNavigate();
 
