@@ -87,7 +87,7 @@ export function AddToOrder(props) {
 							{(price * amount).toFixed(2)} €.
 						</p>
 						<button
-							className="add-to-order centered"
+							className="green-button centered"
 							onClick={() => addItemToOrder()}
 						>
 							Add to Order

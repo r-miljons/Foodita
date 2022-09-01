@@ -5,6 +5,7 @@ import { calculateDiscount } from '../../utilities/calculateDiscount';
 import { Ingredients } from './Ingredients/Ingredients';
 import { AddToOrder } from './AddToOrder/AddToOrder';
 import { setIngredients } from '../../features/ingredients/ingredientsSlice';
+import { BackButton } from '../BackButton/BackButton';
 import starIcon from "../../assets/icons/black-star-icon.svg"
 import vegIcon from "../../assets/icons/vegetarian.svg";
 import './itemPage.css';
@@ -25,6 +26,7 @@ export function Item(props) {
 
     return (
         <div className="item-page-container">
+            <BackButton />
             <div className="item-image-container" style={{ backgroundImage: `url(${itemImage})` }}>
                 <div className="item-rating">
                     <img className="star-icon-item" src={starIcon} />

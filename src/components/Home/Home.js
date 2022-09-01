@@ -21,7 +21,7 @@ export function Home() {
             <header className="hero">
                 <img className="logo" src={foodita} alt="foodita-logo"/>
                 <h1 className="hero-title">Order food online,<br/>enjoy anywhere you want to!</h1>
-                <button className="green-button home-button" onClick={goToMenu}>View Menu</button>
+                <button className="green-button home-button" onClick={goToMenu}>See Menu</button>
             </header>
             <section className="restaurant">
                 <div className="restaurant-text">

@@ -179,7 +179,7 @@ export const menuItems = [
         rating: 4.1,
         delivery: '5 min',
         img: 'coke.jpg',
-        veg: false,
+        veg: true,
         ingredients: ["Coke", "Ice Cubes"],
         description: "Coke is the original thirst quencher and still the most popular soft drink in the world. It's perfect for a hot day or when you just need a cold drink to cool down.",
         id: 14
@@ -192,7 +192,7 @@ export const menuItems = [
         rating: 4.2,
         delivery: '5 min',
         img: 'sprite.jpg',
-        veg: false,
+        veg: true,
         ingredients: ["Sprite", "Ice Cubes"],
         description: "Get excited about Sprite. It's ice cold, and perfect for a summer day.",
         id: 15
@@ -205,7 +205,7 @@ export const menuItems = [
         rating: 4.3,
         delivery: '5 min',
         img: 'fanta.jpg',
-        veg: false,
+        veg: true,
         ingredients: ["Fanta", "Ice Cubes"],
         description: "Fanta is the perfect drink for a hot summer day. It's ice cold and has ice cubes. It's the perfect drink to drink on the beach or by the pool.",
         id: 16

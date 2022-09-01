@@ -1,12 +1,16 @@
 .order-list {
     list-style-type: none;
     padding: 0;
-    width: 400px;
+    width: 450px;
 }
 
 .ordered-item {
     padding: 0.5rem 0;
-    border-bottom: 1px solid rgb(197, 197, 197);
+    box-shadow: 0 0 10px 5px rgba(135, 135, 135, 0.062);
+    background-color: rgb(255, 255, 255);
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 0.7rem;
 }
 
 .ordered-item-flex {
@@ -17,6 +21,12 @@
 
 .order-item-title {
     font-size: 1.5rem;
+}
+
+.ordered-item-text-part {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .ordered-amount {
@@ -31,9 +41,8 @@
 .removed-ingredients {
     background-color: rgb(254, 207, 119);
     color: rgb(79, 79, 79);
-    padding: 0.2rem 1rem;
+    padding: 0.3rem 1rem;
     border-radius: 30px;
-    margin: 0.4rem 0 0;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -54,5 +63,5 @@
 .order-amount {
     padding: 0.1rem 0.3rem;
     max-width: max-content;
-    margin: 0 0 0 auto;
+    margin: 0.5rem 0 0 auto;
 }

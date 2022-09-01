@@ -34,10 +34,12 @@
     font-size: 1.1rem;
     padding: 0.8rem 1.2rem;
     border-radius: 30px;
+    transition: all 0.2s;
 }
 
 .add-to-order:hover {
     cursor: pointer;
+    background-color: rgb(128, 197, 26);
 }
 
 .grey {

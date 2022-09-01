@@ -1,0 +1,40 @@
+.navigation {
+    background-color: rgb(52, 52, 52);
+    padding: 0.5rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.214);
+}
+
+.nav-logo {
+    height: 3.5rem;
+    width: auto;
+    filter: invert(1);
+}
+
+.nav-logo:hover {
+    cursor: pointer;
+}
+
+.nav-items {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.nav-item {
+    max-height: max-content;
+    width: 100px;
+    background-color: rgb(85, 85, 85);
+    text-align: center;
+    padding: 0.5rem 0.8rem;
+    border-radius: 5px;
+    transition: all 0.2s;
+    color: rgb(255, 255, 255);
+}
+
+.nav-item:hover {
+    background-color: rgb(202, 202, 202);
+    color: rgb(44, 44, 44);
+    cursor: pointer;
+}

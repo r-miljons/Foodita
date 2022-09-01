@@ -1,4 +1,7 @@
 .menu-container {
     width: max-content;
-    margin: 0 auto;
+    min-width: 1264px;
+    margin: 0 auto 4rem;
+    height: max-content;
+    min-height: 100%;
 }

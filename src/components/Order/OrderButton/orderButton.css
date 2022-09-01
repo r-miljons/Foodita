@@ -20,11 +20,13 @@
     color: rgb(255, 255, 255);
     font-family: "Rubik", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
     "Droid Sans", "Helvetica Neue", sans-serif;
-    font-size: 1.8rem;
+    font-size: 1.3rem;
+    transition: all 0.2s;
 }
 
 .view-order:hover {
     cursor: pointer;
+    background-color: rgb(128, 197, 26);
 }
 
 .order-container-displacement {

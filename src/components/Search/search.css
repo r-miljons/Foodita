@@ -10,7 +10,7 @@
 
 .search-box {
     display: flex;
-    background-color: rgb(227, 227, 227);
+    background-color: rgba(227, 227, 227, 0.748);
     border-radius: 15px;
     padding: 0.2rem 0.8rem;
     align-items: center;

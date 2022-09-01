@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { OrderedItems } from './OrderedItems/OrderedItems';
 import { Link, useNavigate } from 'react-router-dom';
 import { removeAll } from '../../features/order/orderSlice';
+import { BackButton } from '../BackButton/BackButton';
 import "./order.css";
 
 
@@ -23,6 +24,8 @@ export function Order() {
 
     return (
         <div className="order-page-container">
+            <div className="order-wrap">
+                <BackButton/>
             <h1 className="your-order-title">Your Order</h1>
             {
                 order.contents.length === 0 
@@ -33,7 +36,7 @@ export function Order() {
                 <p className="total-text">Total: </p>
                 <p className="total-sum">{order.total} €</p>
             </div>
-            <button className={order.contents.length === 0? "order-button cant-order" : "order-button"} onClick={handleOrder}>ORDER</button>
+            <button className={order.contents.length === 0? "green-button centered cant-order" : "green-button centered"} onClick={handleOrder}>ORDER</button>
             {
                 userOrdered
                 ? <div className="order-success">
@@ -42,11 +45,12 @@ export function Order() {
                         <p className='success-message'>
                             Our kitchen staff has recieved your order.
                         </p>
-                        <button className='add-to-order centered' onClick={handleBack}>Back To Menu</button>
+                        <button className='green-button centered' onClick={handleBack}>Back To Menu</button>
                     </div>
                 </div>
                 : false
             }
+            </div>
         </div>
     );
 }

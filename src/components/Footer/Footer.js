@@ -10,7 +10,7 @@ export function Footer() {
         <footer>
             <div className="logo-copyright">
                 <img src={logo} alt="foodita-logo"/>
-                <p>© Copyright 2022</p>
+                <p>Copyright © Foodita 2022. All Rights Reserved.</p>
             </div>
             <div className="socials">
                 <img src={facebook} alt="facebook-logo"/>
