@@ -12,7 +12,7 @@ export function Navigation() {
             <div className='nav-items'>
                 <div className="nav-item" onClick={() => navigate("/")}><p>Home</p></div>
                 <div className="nav-item" onClick={() => navigate("/menu")}><p>Menu</p></div>
-                <div className="nav-item"><p>Carrers</p></div>
+                <div className="nav-item" onClick={() => navigate("/careers")}><p>Careers</p></div>
                 <div className="nav-item"><p>About</p></div>
             </div>
         </nav>

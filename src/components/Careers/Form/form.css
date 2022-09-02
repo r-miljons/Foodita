@@ -1,0 +1,80 @@
+
+.required {
+    color: rgb(249, 64, 64);
+    font-weight: 400;
+}
+
+.form-block {
+    background-color: rgb(255, 255, 255);
+    margin: 1rem 0;
+    padding: 1.6rem 2rem 1.6rem;
+    border-radius: 10px;
+    border: 1px solid rgb(209, 209, 209);
+    border-radius: 10px;
+}
+
+.form-input {
+    border: none;
+    border-bottom: 1px solid rgb(181, 181, 181);
+    width: 80%;
+    font-family: "Rubik", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color:rgb(52, 52, 52);
+}
+
+.form-input:focus {
+    outline: none;
+}
+
+label, #discovered {
+    font-family: "Rubik", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+    display: inline-block;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+select {
+    padding: 0.5rem 0.8rem;
+    font-family: "Rubik", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+    font-size: 1.1rem;
+    border-radius: 5px;
+}
+
+select:hover {
+    cursor: pointer;
+}
+
+select:focus {
+    outline: none;
+}
+
+.resume-label {
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+#resume {
+    display: none;
+}
+
+#resume-upload {
+    background-color: rgba(59, 115, 200, 0.601);
+    color:rgb(255, 255, 255);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: all 0.2s;
+    margin: 0;
+}
+
+#resume-upload:hover {
+    cursor: pointer;
+    background-color: rgba(51, 132, 253, 0.674);;
+}
+
+.submit-button {
+    border-radius: 8px;
+}

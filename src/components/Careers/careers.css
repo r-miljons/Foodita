@@ -1,0 +1,49 @@
+.careers-container {
+    min-height: 100%;
+    background-color: rgb(242, 242, 242);
+    padding: 2rem 1rem;
+}
+
+.apply-section {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.apply-banner {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.apply-img {
+    height: 200px;
+    background-position: bottom;
+    background-size: cover;
+}
+
+.apply-text-container {
+    background-color: rgb(255, 255, 255);
+    padding: 1rem 2rem 1.5rem;
+    border: 1px solid rgb(209, 209, 209);
+    border-top: none;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+b {
+    font-weight: 500;
+    color:rgb(57, 57, 57)
+}
+
+.apply-text h1 {
+    margin: 0 0 1rem;
+}
+
+.required-text {
+    margin-top: 1rem;
+    color: rgb(249, 64, 64);
+    font-weight: 400;
+}
+
+.margin-bottom {
+    margin-bottom: 1rem;
+}
