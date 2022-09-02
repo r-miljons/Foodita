@@ -2,7 +2,14 @@ import { React, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getCategories } from "../../../utilities/getCategories";
 import { capitalizeFirstLetter } from "../../../utilities/capitalizeFirstLetter";
-import { sortByLeastExpensive, sortByLeastPopular, sortByMostExpensive, sortByMostPopular, resetSort, addToActiveFilters } from "../../../features/search/searchSlice";
+import {
+	sortByLeastExpensive,
+	sortByLeastPopular,
+	sortByMostExpensive,
+	sortByMostPopular,
+	resetSort,
+	addToActiveFilters,
+} from "../../../features/search/searchSlice";
 import {
 	addCategoryFilter,
 	removeCategoryFilter,
@@ -11,7 +18,7 @@ import {
 	selectSortTypes,
 	selectedSortType,
 	toggleVegMenu,
-    changeSortType
+	changeSortType,
 } from "../../../features/search/searchSlice";
 import "./filter.css";
 
@@ -48,20 +55,28 @@ export function Filter() {
 		dispatch(toggleVegMenu());
 	};
 
-    const handleSortType = (type) => {
-        if (selectedType.includes(type)) {
-            dispatch(resetSort());
-        } else {
-            dispatch(changeSortType(type));
-            dispatch(addToActiveFilters(type));
-            switch (type) {
-                case "Least Expensive": dispatch(sortByLeastExpensive()); break;
-                case "Most Expensive": dispatch(sortByMostExpensive()); break;
-                case "Least Popular" : dispatch(sortByLeastPopular()); break;
-                case "Most Popular" : dispatch(sortByMostPopular()); break;
-            }
-        }
-    }
+	const handleSortType = (type) => {
+		if (selectedType.includes(type)) {
+			dispatch(resetSort());
+		} else {
+			dispatch(changeSortType(type));
+			dispatch(addToActiveFilters(type));
+			switch (type) {
+				case "Least Expensive":
+					dispatch(sortByLeastExpensive());
+					break;
+				case "Most Expensive":
+					dispatch(sortByMostExpensive());
+					break;
+				case "Least Popular":
+					dispatch(sortByLeastPopular());
+					break;
+				case "Most Popular":
+					dispatch(sortByMostPopular());
+					break;
+			}
+		}
+	};
 
 	return (
 		<div className="hide-h-overflow">
@@ -105,7 +120,9 @@ export function Filter() {
 										: "filter-category"
 								}
 								key={index}
-								onClick={() => {handleSortType(type)}}
+								onClick={() => {
+									handleSortType(type);
+								}}
 							>
 								<p>{capitalizeFirstLetter(type)}</p>
 							</div>

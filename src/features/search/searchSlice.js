@@ -64,10 +64,12 @@ export const searchSlice = createSlice({
 		toggleVegMenu: (state, action) => {
 			if (state.searchFilter.vegMenu) {
 				state.searchFilter.vegMenu = false;
+                state.searchResults = menuItems;
 				state.searchFilter.activeFilters =
 					state.searchFilter.activeFilters.filter((x) => x !== "Vegetarian");
 			} else {
 				state.searchFilter.vegMenu = true;
+                state.searchResults = state.searchResults.filter(item => item.veg === true);
 				state.searchFilter.activeFilters.push("Vegetarian");
 			}
 

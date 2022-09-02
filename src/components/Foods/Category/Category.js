@@ -8,11 +8,7 @@ import "./category.css";
 
 export function Category({ category }) {
 	let items = useSelector((state) => state.search.searchResults);
-	// in case "vegetarian" filter is selected, change the items variable to vegitarian menu
-	const isMenuVeg = useSelector((state) => state.search.searchFilter.vegMenu);
-	let filteredMenu = isMenuVeg ? items.filter(item => item.veg === true) : items; 
-
-	const itemsInCategory = sortByCategory(filteredMenu, category);
+	const itemsInCategory = sortByCategory(items, category);
 
 	return (
 		<div className="category">
