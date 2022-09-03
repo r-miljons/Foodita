@@ -8,19 +8,19 @@ import './foods.css';
 
 export function Foods() {
     const searchTerm = useSelector(state => state.search.searchTerm);
-    const searchResults = filterByName(useSelector((state) => state.menu), searchTerm);
+    const searchResults = useSelector(state => state.search.searchResults);
+    const filteredResults = filterByName(useSelector(state => state.menu), searchTerm.toLowerCase());
     // all available categories
     const categories = getCategories(useSelector(state => state.search.searchResults));
-    // categories to be filtered
-    const filters = useSelector(selectCategories);
-
+    // categories dictated by filters
+    const filteredCategories = useSelector(selectCategories);
 
     const dispatch = useDispatch();
-	
-	useEffect(() => {
-		dispatch(setResults(searchResults));
-	}, [searchTerm]);
 
+    useEffect(() => {
+        console.log(searchTerm);
+        dispatch(setResults(filteredResults));
+    },[searchTerm])
 
     if (searchResults.length === 0) {
         return (
@@ -33,11 +33,11 @@ export function Foods() {
     return (
         <div className="foods-container">
             {   
-                filters.includes("All")
+                filteredCategories.includes("All")
                 ? categories.map((category, index) => {
                     return <Category category={category} key={index}/>
                 })
-                : filters.map((category, index) => {
+                : filteredCategories.map((category, index) => {
                     return <Category category={category} key={index}/>
                 })
             }

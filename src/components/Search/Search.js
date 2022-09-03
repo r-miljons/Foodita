@@ -1,8 +1,9 @@
 import { React, useState } from "react";
 import { useDispatch } from "react-redux";
-import { selectCategories, setTerm } from "../../features/search/searchSlice";
+import { selectCategories, setTerm, setResults } from "../../features/search/searchSlice";
 import { useSelector } from "react-redux";
 import { Filter } from "./Filter/Filter";
+import { filterByName } from "../../utilities/filterByName";
 import searchIcon from "../../assets/icons/search.svg";
 import filterIcon from "../../assets/icons/filter.svg";
 import showLess from "../../assets/icons/show-less.svg";
@@ -10,7 +11,7 @@ import './search.css';
 
 export function Search() {
     const dispatch = useDispatch();
-    const searchTerm = useSelector(state => state.searchTerm);
+    const searchTerm = useSelector(state => state.search.searchTerm);
     const categoryFilters = useSelector(selectCategories);
     const activeFilters = useSelector(state => state.search.searchFilter.activeFilters);
     const [filterOpen, setFilterOpen] = useState(false);

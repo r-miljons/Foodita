@@ -9,10 +9,6 @@ import "./home.css";
 export function Home() {
 	const navigate = useNavigate();
 
-	const goToMenu = () => {
-		navigate("/menu");
-	};
-
 	return (
 		<div className="home-container">
 			<header className="hero">
@@ -22,7 +18,12 @@ export function Home() {
 					<br />
 					enjoy anywhere you want to!
 				</h1>
-				<button className="green-button home-button" onClick={goToMenu}>
+				<button
+					className="green-button home-button"
+					onClick={() => {
+						navigate("/menu");
+					}}
+				>
 					View Menu
 				</button>
 			</header>
@@ -36,7 +37,14 @@ export function Home() {
 						in our cozy restaurant. With live music in the evenings, Foodita is
 						the perfect place to enjoy a meal.
 					</p>
-					<button className="green-button locations">See Location</button>
+					<button
+						className="green-button locations"
+						onClick={() => {
+							navigate("/about");
+						}}
+					>
+						See Location
+					</button>
 				</div>
 				<img
 					className="restaurant-img"

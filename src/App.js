@@ -5,6 +5,7 @@ import { Menu } from './components/Menu/MenuComponent';
 import { Item } from './components/ItemPage/ItemPage';
 import { Order } from './components/Order/Order';
 import { Careers } from './components/Careers/Careers';
+import { About } from './components/About/About';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 import './App.css';
 
@@ -15,6 +16,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Home />}/>
         <Route path="/" element={<Layout />}>
+          <Route path='about' element={<About/>}/>
           <Route path='careers' element={<Careers/>}/>
           <Route path="menu" element={<Menu />}/>
           <Route path="menu/item=:id" element={<Item />}/>
