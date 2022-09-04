@@ -1,7 +1,7 @@
 import { React } from 'react';
 import { useNavigate } from 'react-router-dom';
 import arrowBack from "../../assets/icons/arrow-back.svg";
-import "./backButton.css"
+import "./BackButton.css"
 
 export function BackButton() {
     const navigate = useNavigate();
