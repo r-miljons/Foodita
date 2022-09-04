@@ -4,4 +4,6 @@
     margin: 0 auto 4rem;
     height: max-content;
     min-height: 100%;
+    overflow: hidden;
+    padding: 0 1rem;
 }

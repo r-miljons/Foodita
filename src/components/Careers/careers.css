@@ -2,6 +2,7 @@
     min-height: 100%;
     background-color: rgb(242, 242, 242);
     padding: 2rem 1rem;
+    overflow: hidden;
 }
 
 .apply-section {

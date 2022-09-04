@@ -36,3 +36,282 @@
     transform: rotate(360deg);
   }
 }
+
+/* Mobile / Smaller Screens */
+
+/* -------- NavBar -------- */
+
+@media screen and (max-width: 900px) {
+  .navigation {
+    padding: 0.5rem 1rem;
+  }
+  .nav-item {
+    display: none;
+  }
+  .menu-button {
+    display: flex;
+  }
+  .nav-logo {
+    max-width: 180px;
+    width: 70%;
+  }
+  .mobile-menu-container {
+    display: block;
+  }
+  .mobile {
+    display: block;
+  }
+}
+
+/* -------- Footer -------- */
+
+@media screen and (max-width: 800px) {
+  footer {
+    padding: 0 1rem;
+    height: 6rem;
+    gap: 1rem;
+  }
+
+  .logo-copyright {
+    gap: 1rem;
+  }
+
+  .logo-copyright img {
+    width: 3rem;
+  }
+
+  .logo-copyright p {
+    font-size: 0.8rem;
+  }
+
+  .socials {
+    gap: 1rem;
+  }
+
+  .socials img {
+    width: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  footer {
+    height: 7rem;
+  }
+
+  .socials {
+    gap: 0.5rem;
+    flex-direction: column;
+    margin-right: 1rem;
+    justify-content: center;
+  }
+}
+
+/* -------- Home Page -------- */
+
+@media screen and (max-width: 1000px) {
+  .hero {
+    height: 500px;
+  }
+
+  .logo {
+    max-width: 200px;
+    width: 100%;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+    max-height: 220px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 0;
+  }
+
+  .home-button {
+    font-size: 1.5rem;
+    bottom: 3.5rem;
+  }
+
+  .restaurant {
+    flex-direction: column;
+    height: max-content;
+    padding: 2rem 1rem;
+    gap: 2rem;
+  }
+
+  .restaurant h2, .staff h2 {
+    margin-top: 0;
+  }
+
+  .restaurant-text {
+    margin-top: 0;
+  }
+  
+  .staff {
+    flex-direction: column-reverse;
+    height: max-content;
+    padding: 10rem 1rem 2rem;
+    margin-top: -10rem;
+    gap: 2rem;
+  }
+
+  .restaurant-img, .staff-img {
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+  }
+
+  .restaurant-text, .staff-text {
+    max-width: 600px;
+    width: 100%;
+  }
+}
+
+/* -------- About Page -------- */
+
+@media screen and (max-width: 650px) {
+  .open-times-container {
+    overflow: hidden;
+    height: 500px;
+  }
+  .open-times {
+    max-width: none;
+    box-sizing: border-box;
+    border-radius: 0;
+  }
+  .about h1 {
+    padding: 0 1rem;
+    max-height: 98px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .location-container {
+    flex-direction: column;
+  }
+  .location-map {
+    width: 100%;
+  }
+  .location-title {
+    margin-top: 0;
+  }
+}
+
+/* -------- Menu Page -------- */
+
+@media screen and (max-width: 1350px) {
+  .menu-container {
+    box-sizing: border-box;
+    min-width: 0;
+    width: 100%;
+  }
+  .foods-container {
+    width: 100%;
+  }
+  .category {
+    width: 100%;
+  }
+  .search-section {
+    padding-right: 1rem;
+  }
+  .card-list {
+    grid-template-columns: repeat(3, minmax(260px, 1fr));
+    width: 100%;
+    gap: 1rem;
+  }
+  .card-container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .card-list {
+    grid-template-columns: repeat(2, minmax(260px, 1fr));
+  }
+  .menu-container {
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .card-list {
+    grid-template-columns: repeat(1, minmax(200px, 1fr));
+  }
+}
+
+/* -------- Item Page -------- */
+
+@media screen and (max-width: 900px) {
+  .item-title {
+    padding: 1.5rem 1rem;
+  }
+  .back-button-wrap {
+    padding-left: 1rem;
+  }
+  .item-page-info {
+    padding: 0 1rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .item-page-container {
+    width: 100%;
+    padding-top: 1.5rem;
+  }
+  .item-image-container {
+    margin-top: 1.5rem;
+  }
+
+}
+
+@media screen and (max-width: 550px) {
+  .item-price {
+    flex-direction: column;
+  }
+
+  .veg-icon-wrap {
+    align-items: flex-start;
+    padding-top: 0.5rem;
+  }
+  .add-order-wrap {
+    flex-direction: column;
+    width: min-content;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .item-page-info {
+    flex-direction: column;
+  }
+  .ingredients-list {
+    width: 100%;
+  }
+  .add-order-wrap {
+    flex-direction: row;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .add-order-wrap {
+    flex-direction: column;
+  }
+}
+
+/* -------- Order Page -------- */
+
+@media screen and (max-width: 500px) {
+  .your-order-title {
+    margin-top: 0.5rem;
+  }
+  .order-page-container {
+    padding-top: 1.5rem;
+  }
+}
+
+
+
+
+
+
+
+
+

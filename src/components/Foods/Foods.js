@@ -18,7 +18,6 @@ export function Foods() {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        console.log(searchTerm);
         dispatch(setResults(filteredResults));
     },[searchTerm])
 

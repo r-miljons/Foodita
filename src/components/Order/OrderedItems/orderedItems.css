@@ -1,7 +1,7 @@
 .order-list {
     list-style-type: none;
     padding: 0;
-    width: 450px;
+    width: 100%;
 }
 
 .ordered-item {
@@ -16,17 +16,20 @@
 .ordered-item-flex {
     display: flex;
     justify-content: space-between;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .order-item-title {
     font-size: 1.5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .ordered-item-text-part {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    min-width: 0;
 }
 
 .ordered-amount {
@@ -36,6 +39,7 @@
 .order-item-price {
     font-size: 1.5rem;
     text-align: end;
+    white-space: nowrap;
 }
 
 .removed-ingredients {
@@ -46,10 +50,10 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    width: min-content;
-    max-width: 240px;
+    width: 100%;
     box-sizing: border-box;
-    
+    min-width: 0;
+    margin-top: 0.5rem;
 }
 
 .remove-icon-order, .add-icon-order {

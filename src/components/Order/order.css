@@ -1,6 +1,6 @@
 .order-page-container {
     background-color: rgb(242, 242, 242);
-    padding: 2rem;
+    padding: 2rem 1rem;
     min-height: 100%;
     height: max-content;
     overflow: hidden;
@@ -8,7 +8,8 @@
 
 .order-wrap {
     margin: 0 auto;
-    width: max-content;
+    width: 100%;
+    max-width: 450px;
 }
 
 .order-button {
@@ -33,10 +34,12 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 1.5rem;
+    gap: 1rem;
 }
 
 .total-sum {
     font-size: 2rem;
+    word-break: break-all;
 }
 
 .total-text {
@@ -73,6 +76,8 @@
     justify-content: center;
     align-items: center;
     z-index: 99999;
+    padding: 0 1rem;
+    box-sizing: border-box;
 }
 
 .order-success-message-container {
@@ -92,24 +97,6 @@
     margin: 1rem 0;
     font-size: 1.3rem;
     text-align: center;
-}
-
-.back-button {
-    display: flex;
-    align-items: center;
-    background-color: rgb(255, 255, 255);
-    border:2px solid rgb(196, 196, 196);
-    width: max-content;
-    padding: 0.4rem 0.8rem;
-    border-radius: 10px;
-    transition: all 0.2s;
-}
-
-.back-button:hover {
-    cursor: pointer;
-    background-color: rgb(219, 247, 255);
-    border:2px solid rgb(116, 205, 243);
-    box-shadow: 0 0 5px 5px rgba(135, 135, 135, 0.062);
 }
 
 .arrow-back {

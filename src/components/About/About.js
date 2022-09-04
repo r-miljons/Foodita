@@ -22,7 +22,7 @@ export function About() {
                 </div>
                 <div className="location-container">
                     <div className="address-wrap">
-                        <h2 className="location title">Address:</h2>
+                        <h2 className="location-title">Address:</h2>
                         <p>Foodita Restaurant SIA<br/>
                         Street: Lacplesa, bld. 52/54<br/>
                         City:  Riga<br/>

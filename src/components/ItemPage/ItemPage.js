@@ -26,7 +26,9 @@ export function Item(props) {
 
     return (
         <div className="item-page-container">
-            <BackButton />
+            <div className="back-button-wrap">
+                <BackButton />
+            </div>
             <div className="item-image-container" style={{ backgroundImage: `url(${itemImage})` }}>
                 <div className="item-rating">
                     <img className="star-icon-item" src={starIcon} />
@@ -37,8 +39,8 @@ export function Item(props) {
             <div className="item-title">
                 <div className="name-wrap">
                     <h1 className='item-name'>{name}
-                        { veg && <span className="veg-icon-wrap"><img className="veg-icon bigger-veg" src={vegIcon}/></span> }
                     </h1>
+                    { veg && <span className="veg-icon-wrap"><img className="veg-icon bigger-veg" src={vegIcon}/></span> }
                 </div>
                 <div className="card-price item-price">
 					{
@@ -51,7 +53,7 @@ export function Item(props) {
 					}
 			</div>
             </div>
-            <div className="flex-around">
+            <div className="flex-around item-page-info">
                 <Ingredients itemIngredients={ingredients}/>
                 <div>
                     <p className="item-description">{description}</p>
