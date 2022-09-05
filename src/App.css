@@ -259,7 +259,31 @@
   .item-image-container {
     margin-top: 1.5rem;
   }
-
+  .item-rating p {
+    font-size: 1rem;
+  }
+  .star-icon-item {
+    width: 1rem;
+  }
+  .prep-time {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+  .item-name {
+    font-size: 1.5rem;
+  }
+  .bigger-veg {
+    width: 1.5rem;
+  }
+  .bigger-price-discounted {
+    font-size: 1.5rem;
+  }
+  .bigger-price {
+    font-size: 1.5rem;
+  }
+  .item-price {
+    gap: 0.5rem;
+  }
 }
 
 @media screen and (max-width: 550px) {

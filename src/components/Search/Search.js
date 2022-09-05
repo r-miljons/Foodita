@@ -29,7 +29,7 @@ export function Search() {
             <div className="search-section">
                 <div className="search-box">
                     <img className="search-icon" src={searchIcon} />
-                    <input id="search" type="text" placeholder="Search our Menu..." value={searchTerm} onChange={handleChange}/>
+                    <input id="search" type="text" placeholder="Search our menu..." value={searchTerm} onChange={handleChange}/>
                 </div>
                 <div className="filter-icon-wrap">
                     <img className="filter-icon" src={ filterOpen ? showLess : filterIcon } onClick={toggleFilter}/>
