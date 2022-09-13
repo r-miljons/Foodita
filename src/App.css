@@ -228,15 +228,30 @@
 }
 
 @media screen and (max-width: 1000px) {
+  .menu-container {
+    padding: 0;
+  }
+  .search-container {
+    padding: 0 1rem;
+    box-sizing: border-box;
+  }
+  .category-title {
+    padding-left: 1rem;
+  }
   .card-list {
     grid-auto-columns: 38%;
     grid-template-columns: none;
     grid-auto-flow: column;
     overflow-x: auto;
+    padding: 0 1rem;
+    box-sizing: border-box;
   }
   .card-list::-webkit-scrollbar {
     -webkit-appearance: none;
     width: 0px;
+  }
+  .card-container {
+    overflow: visible;
   }
 }
 
