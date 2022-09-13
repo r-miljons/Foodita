@@ -123,12 +123,17 @@
     max-height: 220px;
     overflow: hidden;
     text-overflow: ellipsis;
-    margin-top: 0;
   }
 
   .home-button {
     font-size: 1.5rem;
     bottom: 3.5rem;
+    margin: 0 auto;
+  }
+
+  .locations, .apply {
+    margin: 1.6rem auto 0;
+    display: block;
   }
 
   .restaurant {
@@ -222,18 +227,60 @@
   }
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 1000px) {
   .card-list {
-    grid-template-columns: repeat(2, minmax(260px, 1fr));
+    grid-auto-columns: 38%;
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    overflow-x: auto;
   }
+  .card-list::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 0px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .card-list {
+    grid-auto-columns: 60%;
+  }
+}
+
+@media screen and (max-width: 850px) {
   .menu-container {
     margin-bottom: 2rem;
   }
 }
 
-@media screen and (max-width: 600px) {
-  .card-list {
-    grid-template-columns: repeat(1, minmax(200px, 1fr));
+@media screen and (max-width: 500px) {
+  .card-img {
+    height: 150px;
+  }
+  .card-img p {
+    font-size: 1rem;
+  }
+  .card-price p {
+    font-size: 1rem;
+  }
+  .card-name-wrap h2 {
+    font-size: 1.1rem;
+  }
+  .stars {
+    font-size: 1.2rem;
+  }
+  .menu-icon-wrap {
+    padding-top: 0 !important;
+    align-items: center !important;
+  }
+  .veg-icon {
+    width: 1.2rem;
+  }
+  .card-rating {
+    gap: 0.2rem;
+  }
+  .card-rating img {
+    width: 1rem;
+    margin-bottom: 0.2rem;
   }
 }
 
@@ -276,10 +323,10 @@
     width: 1.5rem;
   }
   .bigger-price-discounted {
-    font-size: 1.5rem;
+    font-size: 1.5rem !important;
   }
   .bigger-price {
-    font-size: 1.5rem;
+    font-size: 1.5rem !important;
   }
   .item-price {
     gap: 0.5rem;

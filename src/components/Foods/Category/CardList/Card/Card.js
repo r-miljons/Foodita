@@ -27,7 +27,7 @@ export function Card(props) {
 				<div className="card-title">
 					<div className="card-name-wrap">
 						<h2>{name}</h2>
-						{ veg && <span className="veg-icon-wrap"><img className="veg-icon" src={vegIcon}/></span> }
+						{ veg && <span className="veg-icon-wrap menu-icon-wrap"><img className="veg-icon" src={vegIcon}/></span> }
 					</div>
 					<div className="card-rating">
 						<img className="star-icon" src={starIcon} />

@@ -3,7 +3,7 @@ import { Outlet, useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { OrderButton } from "../Order/OrderButton/OrderButton";
 import { Footer } from "../Footer/Footer";
-import { Navigation } from "../Navigation/Navigation";
+import { Navigation } from "../Navigation/Navigation"
 import "./layout.css"
 
 export function Layout() {
